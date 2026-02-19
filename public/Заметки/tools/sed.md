@@ -40,6 +40,7 @@ cat out.txt | sed -n '/^-----BEGIN/,/^-----END/p'
 ```bash
 cat file.txt | sed 's/fatal/ERROR/gI'
 ```
+- Меняет строку `fatal` на `ERROR`
 - `s` – substitute, тобишь замена
 - `g` - globally. Все вхождения, а не только первое
 - `I` – Ignore. Игнорировать регистр
