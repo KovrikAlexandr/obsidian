@@ -10,14 +10,12 @@ git rebase [TARGET]
 
 Таким образом, чтобы подтянуть актуальный master в feature ветку:
 ```bash
-git switch feature
+# На feature ветке
 git rebase origin/master
 git push --force-with-lease
 ```
-- Переключились на `feature` ветку
-- Переставляем коммиты на `origin/master`
-- Делаем push с флагом `--force-with-lease`
-
+- `origin/master` – тут сразу подтянется состояние удалённого репозитория
+- `--force-with-lease` – переписать историю
 
 ## Разрешение конфликтов
 
@@ -70,9 +68,6 @@ git config --global pull.rebase true
 
 ## Интерактивный rebase
 
-
-@sitdudz Ревью роли с документацией плиз. Пришлось пару костылей принести:
-- Чтобы 
 
 
 
