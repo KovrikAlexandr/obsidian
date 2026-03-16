@@ -13,12 +13,15 @@ awk '/-----BEGIN CERTIFICATE-----/ {p=1}; p; /-----END CERTIFICATE-----/ {p=0}' 
 
 Вывести переменную ansible:
 ```bash
-ansible sage[0] -m debug -a "var=sage_admin_password"
+ansible logs_collector_api[0] -m debug -a "var=sage_spirit_external_domain"
 ```
 
 Скопировать образ между registry:
 ```bash
-IMAGE='otel/opamp-server-migration:ded0b339' SRC='docker-hosted.artifactory.tcsbank.ru/sage' DST='sit-registry.m1.sage-next.local/sage' skopeo copy "docker://$SRC/$IMAGE" "docker://$DST/$IMAGE"
+export IMAGE='sage-trukk:release-av36' 
+export DST='docker-hosted.artifactory.tcsbank.ru/sage' 
+export SRC='sage-artifactory.tcsbank.ru/sage' 
+skopeo copy "docker://$SRC/$IMAGE" "docker://$DST/$IMAGE"
 ```
 
 ```bash
