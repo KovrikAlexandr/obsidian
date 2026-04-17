@@ -1,7 +1,7 @@
 
 Сохранить цепочку сертов в файл:
 ```bash
-SERVER_NAME=localhost
+SERVER_NAME=192.168.0.173
 PORT=8006
 OUTPUT="fullchain.pem"
 openssl s_client \
